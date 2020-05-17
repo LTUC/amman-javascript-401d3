@@ -1,0 +1,20 @@
+{
+  "name": "class-01",
+  "version": "1.0.0",
+  "description": "Application development in the Node.js ecosystem, including the writing of modular code using CommonJS modules, writing tests to assert code quality, setting up and working in a \"Continuous Integration\"  environment (Github Actions).",
+  "main": "shebang.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint-me": "eslint '**/*.js'"
+  },
+  "keywords": [],
+  "author": "Rawan Nujoom <rawan.nujoom@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "is-url": "^1.2.4",
+    "minimist": "^1.2.5"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0"
+  }
+}
