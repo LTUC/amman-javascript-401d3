@@ -1,0 +1,22 @@
+{
+  "name": "fetch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "Rawan Nujoom <rawan.nujoom@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "is-url": "^1.2.4",
+    "minimist": "^1.2.5"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
+}
