@@ -1,0 +1,24 @@
+{
+  "name": "amman-javascript-401d3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "randomStudent.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LTUC/amman-javascript-401d3.git"
+  },
+  "keywords": [],
+  "author": "Rawan Nujoom <rawan.nujoom@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LTUC/amman-javascript-401d3/issues"
+  },
+  "homepage": "https://github.com/LTUC/amman-javascript-401d3#readme",
+  "dependencies": {
+    "jest": "^26.0.1"
+  },
+  "devDependencies": {}
+}
