@@ -16,6 +16,10 @@ class Validator {
             // type validation 
             let type = field.type ?
                 this.isCorrectType(data[fieldName], field): true;
+        
+            if (!(required && type)) {
+                valid = false;
+            }   
         }
     }
     
@@ -27,8 +31,12 @@ class Validator {
         return typeof num == 'number';
     }
 
-    isArray(arr) {
-        return Array.isArray(arr);
+    isObject(input) {
+        return typeof input == 'object'&& !(input instanceof Array);
+    }
+
+    isArray(arr, valueType) {
+        return Array.isArray(arr) && ( valueType ? input.every(val => typeof val == valueType) : true);
     }
 
     isTruthy(input) {
@@ -39,7 +47,10 @@ class Validator {
         switch (field.type) {
             case 'string': return this.isString(input);
             case 'number' : return this.isNumber(input);
-            case 'array' : return this.isArray(input);
+            case 'array' : return this.isArray(input, field.valueType);
+            case 'object': return this.isObject(input);
+            case 'boolean': return this.isBoolean(input);
+            default: return false;
         }
     }
 
