@@ -46,56 +46,52 @@ describe('Validator module with basic validations', ()=> {
         expect(validator.isArray(func)).toBeFalsy();
         expect(validator.isArray(bool)).toBeFalsy();
     });
-
-
-    // add Objects, Boolean, Function, 
-    describe('Validator module validating a basic shcema', ()=> {
-        it('isValid() validate a record ', () => {
-            // go through the schema and faker. to fill in some data
-            // switch case
-            var testRecord = {};
-            for (let field in schema) {
-                switch(schema[field].type) {
-                    case 'number':
-                        testRecord[field] = faker.random.number();
-                        break;
-                    case 'string':
-                        testRecord[field] = faker.random.word();
-                        break;
-                    case 'array':
-                        testRecord[field]= [];
-                        testRecord[field].push(faker.random.arrayElement());
-                        testRecord[field].push(faker.random.arrayElement());
-                        break;
-                }
-            }
-            console.log("testRecord : ",testRecord)
-            expect(validator.isValid(testRecord)).toBeTruthy();
-        });
-
-
-        it('isValid() type mismatch ', () => {
-            // go through the schema and faker. to fill in some data
-            // switch case
-            var testRecord = {};
-            for (let field in schema) {
-                switch(schema[field].type) {
-                    case 'number':
-                        testRecord[field] = faker.random.word();
-                        break;
-                    case 'string':
-                        testRecord[field] = faker.random.number();
-                        break;
-                    case 'array':
-                        testRecord[field] = faker.random.number();
-                        break;
-                }
-            }
-            expect(validator.isValid(testRecord)).toBeFalsy();
-        });
-    });
-
-    
-
 });
 
+
+// add Objects, Boolean, Function, 
+describe('Validator module validating a basic shcema', ()=> {
+    it('isValid() validate a record ', () => {
+        // go through the schema and faker. to fill in some data
+        // switch case
+        var testRecord = {};
+        for (let field in schema) {
+            switch(schema[field].type) {
+                case 'number':
+                    testRecord[field] = faker.random.number();
+                    break;
+                case 'string':
+                    testRecord[field] = faker.random.word();
+                    break;
+                case 'array':
+                    testRecord[field]= [];
+                    testRecord[field].push(faker.random.arrayElement());
+                    testRecord[field].push(faker.random.arrayElement());
+                    break;
+            }
+        }
+        console.log("testRecord")
+        expect(validator.isValid(testRecord)).toBeTruthy();
+    });
+
+
+    it('isValid() type mismatch ', () => {
+        // go through the schema and faker. to fill in some data
+        // switch case
+        var testRecord = {};
+        for (let field in schema) {
+            switch(schema[field].type) {
+                case 'number':
+                    testRecord[field] = faker.random.word();
+                    break;
+                case 'string':
+                    testRecord[field] = faker.random.number();
+                    break;
+                case 'array':
+                    testRecord[field] = faker.random.number();
+                    break;
+            }
+        }
+        expect(validator.isValid(testRecord)).toBeFalsy();
+    });
+});
