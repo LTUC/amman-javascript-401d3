@@ -1,0 +1,26 @@
+{
+    "companies": [
+        {
+            "_id": "1",
+            "name": "apple",
+            "description": "apple, itunes, mac"
+        },
+        {
+            "_id": "2",
+            "name": "google",
+            "description": "search, gmail, gtalk"
+        }
+    ],
+    "users": [
+        {
+            "_id": "1",
+            "name": "Alaa",
+            "companyId": "2"
+        },
+        {
+            "_id": "2",
+            "name": "Balqees",
+            "companyId": "1"
+        }
+    ]
+}
