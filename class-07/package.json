@@ -1,0 +1,19 @@
+{
+  "name": "class-07",
+  "version": "1.0.0",
+  "description": "Express Server Mechanics: Routing, Middleware, and Approaches to Testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose --coverage"
+  },
+  "keywords": [],
+  "author": "Rawan Nujoom <rawan.nujoom@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1",
+    "supertest": "^4.0.2"
+  }
+}
