@@ -1,0 +1,21 @@
+{
+  "name": "class-09",
+  "version": "1.0.0",
+  "description": "Express is able to run middleware given the presence of a specific parameter within a router. This gives us the ability to run special code whenever, for example, we an 'id' or a 'model' ... taking advantage of this can give us a great amount of flexibility in our servers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Rawan Nujoom <rawan.nujoom@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.17",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
+}
