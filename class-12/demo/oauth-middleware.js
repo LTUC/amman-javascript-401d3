@@ -3,8 +3,8 @@
 const users = require('./users');
 const superagent = require('superagent');
 // add them in ur .env
-const CLIENT_ID = '824115659eb41b852908';
-const CLIENT_SECRET = 'e75cbe21dae93b1c39df2c0b0617bd45153799e6';
+const CLIENT_ID = 'xxxxx';
+const CLIENT_SECRET = 'xxxxx';
 // github route get me the token as login/signup
 const tokenServerUrl = 'https://github.com/login/oauth/access_token';
 // github route get the user object
@@ -24,10 +24,8 @@ module.exports = async (req, res, next)=> {
         console.log('1- CODE: ', code);
 
         let remoteToken = await exchangeCodeForToken(code);
-        console.log("remoteToken >>>> ",remoteToken);
 
         let remoteUser = await getRemoteUserInfo(remoteToken);
-        console.log("remoteUser : ",remoteUser)
 
         let [user , token] = await getUser(remoteUser);
         req.user = user; 
