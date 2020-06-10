@@ -2,7 +2,7 @@
 
 const mongoose = require('mongoose');
 const server = require('./lib/server');
-const MONGODB_URI = 'mongodb://localhost:27017/class-09';
+const MONGODB_URI = 'mongodb+srv://admin-test:test123@cluster0-fpo2a.mongodb.net/test-2';
 
 const options = {
     useNewUrlParser: true,
