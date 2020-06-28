@@ -1,14 +1,14 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom';
 
-// import App from app.js 
+import App from './app.js';
 
 class Main extends React.Component {
     render() {
-        // return App
+        return <App />;
     }
 }
 
 
 const rootElement = document.getElementById("root");
-ReactDom.render(<Main />, rootElement);
+ReactDOM.render(<Main />, rootElement);
