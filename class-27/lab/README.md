@@ -1,62 +1,75 @@
 # LAB - React Testing and Deployment
 
-Write Unit and Acceptance tests for your Counter application; Deploy to the cloud
+**RESTy Phase 2:** Test and Deploy the RESTy API testing application
 
 ## Before you begin
 
 Refer to *Getting Started*  in the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for complete setup, configuration, deployment, and submission instructions.
 
-## Getting Started
+> Create a new repository for this project, called 'resty' and work in a branch called 'testing'
 
-Starter code has been provided for you in the `/lab/starter-code` folder.
+**NOTE** Starter code has been provided for you in the `/lab/starter-code` folder.
 
-For this assignment, work locally instead of at Code Sandbox, as you'll need to create testing snapshots, build your docs and view the production build files.
+## Business Requirements
 
-Create a new repository for this assignment, copy the starter-code folder contents into it, and run an npm install to get started.
+Refer to the [RESTy System Overview](../../apps-and-libraries/resty/README.md) for a complete review of the application, including Business and Technical requirements along with the development roadmap.
 
-## Requirements
+## Phase 2 Requirements
 
-### Write Tests
+In phase 2, we will be building on our working foundation, creating a full test suite and deploying our application into the cloud so that it is consumable for public access.
 
-* Write tests to cover the counter component
-  * For Up and Down events
-    * Assert state changes properly
-    * Assert that state is being transferred to the DOM
-    * Assert DOM stability via snapshot testing.
-      * i.e. take a snapshot, change the markup/jsx, assert failure.  Put it back to make it all good.
-* Add some sleek and amazing styling, different from the previous lab.
+The following user/developer stories detail the major functionality for this phase of the project.
+
+- As a user, I expect to be able to use the RESTy application from anywhere via a public web server
+- As a user, I want to be assured the application will always operate to my expectations
+
+## Technical Requirements / Note
+
+### Write Unit and Behavioral Tests
+
+- Write tests to cover the application, specifically the `<Form>` component
+  - Does it properly store the users input into state?
+  - Does it properly display the users input in the output area on form submit?
+  - Does it properly clear the form/state after the form is submitted?
+  - Do the method selectors/checkboxes obey your styling rules?
 
 ### Deploy the application
 
-* Create a new repository for your application at Github and connect your sandbox to it.
-* Clone the repo to your local machine
-* Make sure that 'aws.yml' and 'build' are in your .gitignore, and then commit your code back to GitHub
-* Perform an `npm install`
-* Perform an `npm run build`
-  * You should now have a fully functional static build in the builds folder
-  * You can verify this by running `live-server` from within the build folder
-* In your README, Submit all 3 deployed URLs from the below steps as well as your GitHub Actions test report and documentation links.
+Deploy your application to multiple cloud providers. It's important to be able to compare and contrast their operations as well as to be familiar with their inner workings
 
-#### Netlify
+#### Netlify - <netlify.com>
 
-* Setup Netlify to deploy from your master branch
+- Create a new app
+- Connect the application to your github repository
+- Setup Netlify to deploy from your master branch
 
-#### AWS S3 Website
+#### AWS S3 Website - <https://s3.console.aws.amazon.com/s3/>
 
-* Run the build script `npm run build` for your application
-* Do a manual deployment of the `build` folder contents to a new Bucket and Cloud at AWS
-* Set the permissions to public
-* Enable Static Website Hosting
+- Run the build script `npm run build` for your application
+- Create a new bucket for your website at AWS in S3
+- Do a manual deployment of the `build` folder contents into your bucket
+- Set the permissions to public
+- Enable Static Website Hosting
 
-#### AWS Elastic Beanstalk
+#### AWS Amplify - <https://us-west-2.console.aws.amazon.com/amplify/>
 
-* Use the `aws-tools` npm package to create an aws.yml file
-* Prepare an automated deployment through Cloud Formation using the `aws.yml` file you've created
-* Your App should auto-deploy to AWS Cloudfront.
+- Create a new app
+- Connect the application to your github repository
+- Setup Amplify to deploy from your master branch
+
+#### GitHub Page
+
+- Ensure that your `package.json` file a `homepage` setting
+- Ensure that your `package.json` file has `predeploy` and `deploy` scripts
+  - `predeploy` should run `npm run build`
+  - `deploy` should invoke `gh-pages -d build`
+- Include a correct `.yml` file in the `.github` folder of your repository
+  - This should do an `npm install` followed by `npm run deploy`
+- This should properly build the React application every time you check into master
+- Turn on github pages, and point it at the `gh-pages` branch
 
 ### Assignment Submission Instructions
 
 Refer to the the [Submitting React Apps Lab Submission Instructions](../../../reference/submission-instructions/labs/react-apps.md) for the complete lab submission process and expectations
 
-
-* Submit links to both deployments at AWS
+- Be sure and submit links to each of your deployments
