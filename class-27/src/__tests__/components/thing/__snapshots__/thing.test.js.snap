@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Thing/> renders correctly 1`] = `
+<section>
+  <span>
+    Stuff: 
+    true
+  </span>
+  <button
+    onClick={[Function]}
+  >
+    Click
+  </button>
+</section>
+`;
