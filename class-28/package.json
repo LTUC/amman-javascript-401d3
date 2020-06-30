@@ -1,0 +1,30 @@
+{
+  "name": "class-28",
+  "version": "1.0.0",
+  "description": "Applications are comprised of many components, usually working together to perform a higher level task. As such, they'll all need access to state, methods to read/modify state, and an ability to respond to triggered actions in other, related components. Today, we'll explore how React applications do this, using JSX attributes, better known as `props`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "author": "Rawan Nujoom <rawan.nujoom@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^3.4.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
