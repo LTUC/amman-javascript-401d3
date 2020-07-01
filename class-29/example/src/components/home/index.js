@@ -16,7 +16,7 @@ class Home extends React.Component {
   }
 
   handleData = async () => {
-    let data = await superagent.get('https://swapi.co/api/people/?format=json');
+    let data = await superagent.get('https://swapi.dev/api/people/?format=json');
     console.log(data);
     this.setState({ count: data.body.count, results: data.body.results });
   }
@@ -24,8 +24,8 @@ class Home extends React.Component {
   render() {
     return (
       <ul>
-        {this.state.results.map(item => {
-          return <Card person={item} />
+        {this.state.results.map((item, i) => {
+          return <Card key={i} person={item} />
         })}
       </ul>
     )

@@ -11,7 +11,7 @@ class App extends React.Component {
       <BrowserRouter>
         <Header />
         <Routes />
-        <Footer text="Class 29" />
+        <Footer text="add footer text here! " />
       </BrowserRouter>
     )
   }
