@@ -17,7 +17,7 @@ class Home extends React.Component {
 
   handleData = async () => {
     let data = await superagent.get('https://swapi.dev/api/people/?format=json');
-    console.log(data);
+    console.log(data.headers);
     this.setState({ count: data.body.count, results: data.body.results });
   }
 
