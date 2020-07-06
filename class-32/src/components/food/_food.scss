@@ -1,0 +1,16 @@
+@import '../../scss/vars';
+
+.wrapper {
+    padding: $pad;
+    border: $border-size $black;
+
+    h1 {
+        font-size: $pad * 3;
+        color: $green;
+    }
+
+    h2 {
+        font-size: $pad * 2;
+        color: $red;
+    }
+}
