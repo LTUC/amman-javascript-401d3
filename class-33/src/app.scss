@@ -1,0 +1,36 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding:0;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+   
+    #root {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+
+        main {
+            padding: 2rem;
+            display: flex;
+            flex: 1;
+            section {
+                justify-content: space-evenly;
+                display: flex;
+                flex: 1;
+            }
+            label {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+   
+    
+
+
+}
