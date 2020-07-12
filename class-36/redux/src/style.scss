@@ -1,0 +1,39 @@
+#root {
+    display: flex;
+    flex-direction: column;
+}
+.counter {
+    flex:1;
+    font-size: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem 0;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            border: 1px solid transparent;
+            padding: .5rem;
+
+            &:hover {
+                cursor: pointer;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+.status {
+    background: #ccc;
+    color: #111;
+    height: 4rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
